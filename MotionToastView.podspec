@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'sameersyd' => 'sameer.nwaz@gmail.com' }
-  s.source           = { :git => 'https://github.com/sameersyd/MotionToastView.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/GawenBerger/MotionToastView.git', :tag => s.version.to_s }
   s.social_media_url = 'https://www.linkedin.com/in/sameer-nawaz-linked/'
 
   s.ios.deployment_target = '12.0'
