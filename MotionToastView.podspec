@@ -22,18 +22,17 @@ Pod::Spec.new do |s|
                        DESC
 
   s.homepage         = 'https://github.com/sameersyd/MotionToastView'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'sameersyd' => 'sameer.nwaz@gmail.com' }
   s.source           = { :git => 'https://github.com/GawenBerger/MotionToastView.git', :tag => s.version.to_s }
   s.social_media_url = 'https://www.linkedin.com/in/sameer-nawaz-linked/'
 
-  s.ios.deployment_target = '12.0'
+  s.ios.deployment_target = '11.0'
 
   s.source_files = 'Source/**/**'
   s.swift_version = '5.0'
   s.platforms = {
-    "ios": "12.0"
+    "ios": "11.0"
   }
   
   s.resource_bundles = {
