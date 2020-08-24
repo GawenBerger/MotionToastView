@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MTVibrant: UIView {
+public class MTVibrant: UIView {
     
     @IBOutlet weak var headLabel: UILabel!
     @IBOutlet weak var msgLabel: UILabel!
@@ -49,32 +49,32 @@ class MTVibrant: UIView {
         switch toastType {
             case .success:
                 headLabel.text = "Success"
-                headLabel.textColor = loadColor(name: "white_green")
-                circleImg.image = loadImage(name: "success_icon")
-                toastView.backgroundColor = loadColor(name: "green_dark")
+                headLabel.textColor = MTVibrant.loadColor(name: "white_green")
+                circleImg.image = MTVibrant.loadImage(name: "success_icon")
+                toastView.backgroundColor = MTVibrant.loadColor(name: "green_dark")
                 break
             case .error:
                 headLabel.text = "Error"
-                headLabel.textColor = loadColor(name: "white_red")
-                circleImg.image = loadImage(name: "error_icon")
-                toastView.backgroundColor = loadColor(name: "red_dark")
+                headLabel.textColor = MTVibrant.loadColor(name: "white_red")
+                circleImg.image = MTVibrant.loadImage(name: "error_icon")
+                toastView.backgroundColor = MTVibrant.loadColor(name: "red_dark")
                 break
             case .warning:
                 headLabel.text = "Warning"
-                headLabel.textColor = loadColor(name: "white_yellow")
-                circleImg.image = loadImage(name: "warning_icon")
-                toastView.backgroundColor = loadColor(name: "yellow_dark")
+                headLabel.textColor = MTVibrant.loadColor(name: "white_yellow")
+                circleImg.image = MTVibrant.loadImage(name: "warning_icon")
+                toastView.backgroundColor = MTVibrant.loadColor(name: "yellow_dark")
                 break
             case .info:
                 headLabel.text = "Info"
-                headLabel.textColor = loadColor(name: "white_blue")
-                circleImg.image = loadImage(name: "info_icon")
-                toastView.backgroundColor = loadColor(name: "blue_dark")
+                headLabel.textColor = MTVibrant.loadColor(name: "white_blue")
+                circleImg.image = MTVibrant.loadImage(name: "info_icon")
+                toastView.backgroundColor = MTVibrant.loadColor(name: "blue_dark")
                 break
         }
     }
     
-    func loadImage(name: String) -> UIImage? {
+    public static func loadImage(name: String) -> UIImage? {
         let podBundle = Bundle(for: MTVibrant.self)
         if let url = podBundle.url(forResource: "MotionToastView", withExtension: "bundle") {
             let bundle = Bundle(url: url)
@@ -83,7 +83,7 @@ class MTVibrant: UIView {
         return nil
     }
     
-    func loadColor(name: String) -> UIColor? {
+    public static func loadColor(name: String) -> UIColor? {
         let podBundle = Bundle(for: MTVibrant.self)
         if let url = podBundle.url(forResource: "MotionToastView", withExtension: "bundle") {
             let bundle = Bundle(url: url)
